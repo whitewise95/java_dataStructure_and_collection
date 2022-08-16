@@ -10,6 +10,7 @@ public class HashMapExercise {
          * 2) put()  =  put(키,값) 으로 MapCollection에 저장된다.
          * 3) get()  =   get(키) 메소드로 키를 입력하면 값이 나온다.
          * 4) containsKey()   =  containsKey(키) 메소드는 해당 키에 철수가 있는지 확인하는 메소드다
+         * 5) remove()   =  remove(키) 해당 키를 삭제하는 메소드다.
          * */
 
          //1
@@ -19,6 +20,7 @@ public class HashMapExercise {
          map.put("짱구", 200);
          map.put("철수", 400);
 
+
          //3  {철수=400, 짱구=200},  200,  400
          System.out.println(map);
          System.out.println(map.get("짱구"));
@@ -26,6 +28,12 @@ public class HashMapExercise {
 
          //4  true
          System.out.println(map.containsKey("철수"));
+
+
+         // false
+         map.put("유리", 400);
+         map.remove("유리");
+         System.out.println(map.containsKey("유리"));
 
 
         /*
@@ -39,7 +47,7 @@ public class HashMapExercise {
          newMap.putAll(map);
          System.out.println(newMap);
 
-         //2  key = 철수 value = 400,   key = 짱구 value = 200
+         // 2  key = 철수 value = 400,   key = 짱구 value = 200
          newMap.forEach((key,value) -> System.out.println("key = " + key + " value = " + value));
 
 
@@ -48,9 +56,9 @@ public class HashMapExercise {
              System.out.println(key);
          }
 
-
-
-
+         // 중복된 값은 덮어진다.   {철수=400, 짱구=400}
+         newMap.put("짱구", 400);
+         System.out.println(newMap);
 
     }
 }
