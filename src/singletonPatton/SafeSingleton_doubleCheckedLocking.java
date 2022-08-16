@@ -1,7 +1,7 @@
 package singletonPatton;
 
 public class SafeSingleton_doubleCheckedLocking {
-    private static volatile SafeSingleton_doubleCheckedLocking safeSingleton;
+    private static volatile SafeSingleton_doubleCheckedLocking safeSingleton_doubleCheckedLocking;
 
     private SafeSingleton_doubleCheckedLocking() {
     }
@@ -15,13 +15,13 @@ public class SafeSingleton_doubleCheckedLocking {
     *  instance를 반환하게 된다.
     * */
     public static SafeSingleton_doubleCheckedLocking getInstance() {
-        if (safeSingleton == null) {
+        if (safeSingleton_doubleCheckedLocking == null) {
             synchronized (SafeSingleton_doubleCheckedLocking.class) {
-                if (safeSingleton == null) {
+                if (safeSingleton_doubleCheckedLocking == null) {
                    return new SafeSingleton_doubleCheckedLocking();
                 }
             }
         }
-        return safeSingleton;
+        return safeSingleton_doubleCheckedLocking;
     }
 }
