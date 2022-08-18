@@ -9,11 +9,11 @@ import java.util.*;
 public class 문자열압축 {
     public static void main(String[] args) {
         //Test 데이터
-        System.out.println(solution("aabbaccc"));
-        System.out.println(solution("ababcdcdababcdcd"));
-        System.out.println(solution("abcabcdede"));
-        System.out.println(solution("abcabcabcabcdededededede"));
-        System.out.println(solution("xababcdcdababcdcd"));
+        System.out.println(solution2("aabbaccc"));
+        System.out.println(solution2("ababcdcdababcdcd"));
+        System.out.println(solution2("abcabcdede"));
+        System.out.println(solution2("abcabcabcabcdededededede"));
+        System.out.println(solution2("xababcdcdababcdcd"));
     }
 
     public static int solution(String s) {
@@ -86,5 +86,38 @@ public class 문자열압축 {
         }
 
         return answer;
+    }
+
+//    aabbaccc  length = 8
+    public static int solution2(String s) {
+        int min = s.length();  //8
+        int len = s.length()/2+1;  //5
+        for(int i = 1; i < len; i++) {
+            String before = "";
+            int sum = 0;
+            int cnt = 1;
+            for(int j = 0; j < s.length();) {
+                int start = j;
+                j = (j+i > s.length()) ? s.length():j+i;
+                String temp = s.substring(start, j);
+                if(temp.equals(before)) {
+                    cnt++;
+                } else {
+                    if(cnt != 1) {
+                        sum += (int)Math.log10(cnt)+1;
+                    }
+                    cnt = 1;
+                    sum+=before.length();
+                    before = temp;
+                }
+            }
+            sum+=before.length();
+            if(cnt != 1) {
+                sum += (int)Math.log10(cnt)+1;
+            }
+            min = (min > sum) ? sum : min;
+        }
+
+        return min;
     }
 }

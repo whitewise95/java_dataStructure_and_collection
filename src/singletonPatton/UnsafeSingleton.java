@@ -3,7 +3,7 @@ package singletonPatton;
 import java.util.*;
 
 public class UnsafeSingleton {
-    private Map<String, String> map = new HashMap();
+    private static Map<String, String> map = new HashMap();
 
     private static UnsafeSingleton unsafeSingleton;
 
