@@ -29,6 +29,10 @@ public class HashMapUnsafeTest {
         Thread thread = new Thread(runnable);
         thread.start();
         Thread.sleep(1000);
-        hashmap.put("jeju", "064");
+//        hashmap.put("jeju", "064");
+        hashmap.forEach((key, value) -> {
+            System.out.println("{" + key + "," + value + "}");
+        });
     }
+
 }

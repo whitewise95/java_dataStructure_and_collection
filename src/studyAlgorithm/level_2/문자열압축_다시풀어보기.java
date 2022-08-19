@@ -1,4 +1,4 @@
-package studyAlgorithm;
+package studyAlgorithm.level_2;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ import java.util.*;
  *  https://school.programmers.co.kr/learn/courses/30/lessons/60057
  *  22/08/18
  * */
-public class 문자열압축 {
+public class 문자열압축_다시풀어보기 {
     public static void main(String[] args) {
         //Test 데이터
         System.out.println(solution2("aabbaccc"));
