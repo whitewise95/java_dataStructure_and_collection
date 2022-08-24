@@ -10,22 +10,22 @@ public class SelectSort {
     }
 
     static int[] solution() {
-        int[] randomNum = new int[] { 4, 6, 2, 9, 1 };
+        int[] arr = new int[] { 4, 6, 2, 9, 1 };
 
-        for (int i = 0; i < randomNum.length-1; i++) {
+        for (int i = 0; i < arr.length-1; i++) {
             int cnt = 0;  //몇번 반복하는지 확인하기 위함
             int minIndex = i;
-            for (int j = i; j < randomNum.length-1; j++) {
-                cnt++;
-                if(randomNum[minIndex] > randomNum[j+1]){
+            for (int j = i; j < arr.length-1; j++) {
+                cnt++;  // 반복할 때마다 카운트
+                if(arr[minIndex] > arr[j+1]){
                     minIndex = j+1;
                 }
             }
             System.out.println(cnt);
-            int temp = randomNum[i];
-            randomNum[i] = randomNum[minIndex];
-            randomNum[minIndex] = temp;
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
         }
-        return randomNum;
+        return arr;
     }
 }
