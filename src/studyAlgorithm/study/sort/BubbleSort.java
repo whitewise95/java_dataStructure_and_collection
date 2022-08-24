@@ -1,4 +1,4 @@
-package study.sort;
+package studyAlgorithm.study.sort;
 
 public class BubbleSort {
     public static void main(String[] args) {

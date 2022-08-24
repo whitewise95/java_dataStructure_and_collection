@@ -1,4 +1,4 @@
-package study.sort;
+package studyAlgorithm.study.sort;
 
 public class SelectSort {
     public static void main(String[] args) {
