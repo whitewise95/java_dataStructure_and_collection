@@ -19,7 +19,6 @@ public class 같은_숫자는_싫어 {
             if (overLap != arr[i]) {
                 overLap = arr[i];
                 integers.add(arr[i]);
-
             }
         }
         System.out.println(integers);
