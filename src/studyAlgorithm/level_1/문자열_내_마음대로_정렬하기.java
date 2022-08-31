@@ -73,4 +73,38 @@ public class 문자열_내_마음대로_정렬하기 {
         return strings;
     }
 
+    public static String[] solution2(String[] strings, int n) {
+        String[] answer = strings;
+
+        for(int i = 0;i<answer.length-1;i++){
+            String temp = "";
+          /*
+          for(int j= 0;j<answer.length;j++){
+              System.out.println(answer[j]);
+          }
+          */
+            for(int k= i+1;k<answer.length;k++){
+                if(answer[i].charAt(n) > answer[k].charAt(n)){
+                    temp = answer[i];
+                    answer[i] = answer[k];
+                    answer[k] = temp;
+                }
+            }
+        }
+        for(int i = 0;i<answer.length-1;i++){
+            String temp = "";
+            for(int k= i+1;k<answer.length;k++){
+                if(answer[i].charAt(n) == answer[k].charAt(n)){
+                    if(answer[i].compareTo(answer[k])>0){
+                        temp = answer[i];
+                        answer[i] = answer[k];
+                        answer[k] = temp;
+                    }
+                }
+            }
+        }
+
+        return answer;
+    }
+
 }
