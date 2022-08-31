@@ -24,19 +24,19 @@ public class BinarySearch {
         // 2번
         while (low <= high) {
 
-            // 2-4 : low와 high를 다시 설정해준 번위의 가운데 index를 찾아낸다.
+            // 2-1 : low와 high를 다시 설정해준 번위의 가운데 index를 찾아낸다.
             int index = (low + high) / 2;
 
-            // 2-1 : 타겟값과 해당 index 가 같다면 그 index를 반환합니다.
+            // 2-2 : 타겟값과 해당 index 가 같다면 그 index를 반환합니다.
             if (iArr[index] == target) {
                 return index;
 
-            // 2-2 : 타겟값이 해당 index보다 작다면 그 인덱스 보다 높은 index가 필요없으니 high 를 해당 index로 변경해
+            // 2-3 : 타겟값이 해당 index보다 작다면 그 인덱스 보다 높은 index가 필요없으니 high 를 해당 index로 변경해
             //       해당 index보다 위 index를 보지 않도록 설정해줍니다.
             } else if (iArr[index] > target) {
                 high = index - 1;
 
-            // 2-3 :  2-2와 반대로 해당 타겟값이 index보다 크다면 아래 index를 보지 않도록 low를 해당 index로 변경한다.
+            // 2-4 :  2-2와 반대로 해당 타겟값이 index보다 크다면 아래 index를 보지 않도록 low를 해당 index로 변경한다.
             } else {
                 low = index + 1;
             }
