@@ -56,7 +56,7 @@ public class ArrayTest {
 
         //데이터 초기화 예제
         numbers2 = new int[5];
-        int cnt = 2;    
+        int cnt = 2;
 
         for (int i = 0; i < numbers2.length; i++) {
             numbers2[i] = cnt * i;  // 0, 2, 4, 6, 8
