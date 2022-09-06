@@ -125,7 +125,7 @@ public class ArrayListTest {
 
 
 
-        
+
         /*
         존재여부 확인 :  contains() 메소드를 사용하여 인자로 ArrayList안에 존재하는지 알고싶은 데이터를 주면 boolean값으로 확인이 가능합니다.
          */
