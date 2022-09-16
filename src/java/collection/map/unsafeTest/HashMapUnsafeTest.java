@@ -1,6 +1,4 @@
-package collection.map.unsafeTest;
-
-import singletonPatton.UnsafeSingleton;
+package java.collection.map.unsafeTest;
 
 import java.util.*;
 

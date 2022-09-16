@@ -29,7 +29,7 @@ public class ArrayQueue {
         }
 
         if(isFull()){
-            System.out.println("Inserting fail! Array Queue is full!!");
+            System.out.println("Inserting fail! java.Array Queue is full!!");
         } else {
             itemArr[++rear] = item;
             System.out.println("Inserted Item : " + item);
@@ -38,10 +38,10 @@ public class ArrayQueue {
 
     public String dequeue(){
         if(isEmpty()){
-            System.out.printf("Array Queue is empty!! %n %n");
+            System.out.printf("java.Array Queue is empty!! %n %n");
             return null;
         } else {
-            System.out.printf("Array Queue>> ");
+            System.out.printf("java.Array Queue>> ");
             System.out.println(itemArr[++front]);
             return itemArr[front];
         }
