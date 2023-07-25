@@ -22,7 +22,7 @@ public class 대충_만든_자판 {
 
 		for (String target : targets) {
 			String[] split = target.split("");
-			
+
 
 			for (String key : keymap) {
 
